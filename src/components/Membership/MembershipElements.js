@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AiOutlineCheckCircle } from 'react-icons/ai'
 
 
 export const MembershipContainer = styled.div`
@@ -51,24 +52,29 @@ export const MembershipCard = styled.div`
     justify-content: space-between;
 `
 
-export const MembershipIcon = styled.img`
-    height: 200px;
-    min-width: 200px;
-    max-width: 100%;
-    /* color: #f9032f; */
+export const MembershipTitle = styled.h2`
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f9032f;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+`
+
+export const ListIcon = styled(AiOutlineCheckCircle)`
+    color: #f9032f;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.1rem;
+    font-size: 1.5rem;
 `
 
 export const MembershipInfo = styled.div`
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    text-align: center;
     height: 100%;
-`
-
-export const MembershipTitle = styled.h2`
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
 `
 
 export const MembershipDesc = styled.p`

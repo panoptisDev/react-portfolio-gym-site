@@ -1,9 +1,7 @@
-import Image1 from '../Images/weightlifting.png'
 
 
 export const membershipData = [
     {
-        img: Image1,
         title: 'Starter',
         desc1: 'Access to entire gym',
         desc2: '',
@@ -12,7 +10,6 @@ export const membershipData = [
         button: 'Sign Up',
     },
     {
-        img: Image1,
         title: 'Standard',
         desc1: 'Access to entire gym',
         desc2: 'Group classes pass',
@@ -21,7 +18,6 @@ export const membershipData = [
         button: 'Sign Up',
     },
     {
-        img: Image1,
         title: 'Unlimited',
         desc1: 'Access to entire gym',
         desc2: 'Unlimited Group classes',

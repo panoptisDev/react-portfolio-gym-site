@@ -25,7 +25,7 @@ function Hero() {
           <HeroContent>
             <HeroItems>
               <HeroH1>Open Everyday</HeroH1>
-              <HeroP>Join Now for only $29/Month</HeroP>
+              <HeroP>Join Now for only $19/Month</HeroP>
               <HeroBtnWrapper>
                 <Button
                   to='signup' 
