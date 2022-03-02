@@ -2,8 +2,9 @@ import { useState } from 'react';
 import {
   HeroContainer,
   HeroContent,
-  HeroHeader,
-  HeroInfo,
+  HeroItems,
+  HeroH1,
+  HeroP,
   HeroBtnWrapper,
   ArrowForward,
   ArrowRight,
@@ -22,26 +23,26 @@ function Hero() {
     <>
         <HeroContainer id='home'>
           <HeroContent>
-            <HeroHeader>Open Everyday</HeroHeader>
-            <HeroInfo>
-              Join Now for only $29/Month
-            </HeroInfo>
-            <HeroBtnWrapper>
-              <Button
-                to='signup' 
-                onMouseEnter={onHover} 
-                onMouseLeave={onHover}
-                primary='true'
-                dark='true'
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact='true'
-                offset={-80}
-              >
-                Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-              </Button>
-            </HeroBtnWrapper>
+            <HeroItems>
+              <HeroH1>Open Everyday</HeroH1>
+              <HeroP>Join Now for only $29/Month</HeroP>
+              <HeroBtnWrapper>
+                <Button
+                  to='signup' 
+                  onMouseEnter={onHover} 
+                  onMouseLeave={onHover}
+                  primary='true'
+                  dark='true'
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                >
+                  Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+                </Button>
+              </HeroBtnWrapper>
+            </HeroItems>
           </HeroContent>
         </HeroContainer>
     </>

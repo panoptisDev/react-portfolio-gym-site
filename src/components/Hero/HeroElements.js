@@ -3,29 +3,6 @@ import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md';
 import ImgBg from '../Images/gym-1.jpeg'
 
 
-// export const HeroContainer = styled.div`
-//     background: #0c0c0c;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     padding: 0 30px;
-//     height: 800px;
-//     position: relative;
-//     z-index: 1;
-
-// `
-
-// export const HeroBg = styled.div`
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     overflow: hidden;
-// `;
-
 export const HeroContainer = styled.div`
     background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url(${ImgBg});
     height: 100vh;
@@ -34,43 +11,49 @@ export const HeroContainer = styled.div`
 `
 
 export const HeroContent = styled.div`
-    z-index: 3;
-    max-width: 1200px;
-    position: absolute;
-    padding: 8px 24px;
+    /* height: calc(100vh - 10px); */
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    padding: 0rem calc((100vw - 1300px) /2);
+`
+
+export const HeroItems = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-`;
-
-export const HeroHeader = styled.h1`
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    max-height: 100%;
+    padding: 0 2rem;
+    width: 800px;
     color: #fff;
-    font-size: 48px;
-    text-align: center;
-    @media screen and (max-width: 768px) {
-        font-size: 40px;
-    }
-    @media screen and (max-width: 480px) {
-        font-size: 32px;
-    }
-`;
+    line-height: 1;
 
-export const HeroInfo = styled.p`
-    margin-top: 24px;
-    color: #fff;
-    font-size: 24px;
-    text-align: center;
-    max-width: 600px;
-    @media screen and (max-width: 768px) {
-        font-size: 24px;
+    @media screen and (max-width: 650px) {
+        width: 100%;
     }
-    @media screen and (max-width: 480px) {
-        font-size: 18px;
+`
+
+export const HeroH1 = styled.h1`
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #f9032f;
+
+    @media screen and (max-width: 650px) {
+        width: 65%;
     }
-`;
+`
+
+export const HeroP = styled.p`
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    margin-bottom: 1rem;
+`
 
 export const HeroBtnWrapper = styled.div`
-    margin-top: 32px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
