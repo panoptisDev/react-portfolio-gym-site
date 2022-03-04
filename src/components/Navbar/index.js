@@ -59,18 +59,6 @@ function Navbar({ toggle }) {
                     </NavItem>
                     <NavItem>
                         <NavLinks
-                            to='services'
-                            smooth={true}
-                            duration={500}
-                            spy={true}
-                            exact='true'
-                            offset={-80}
-                        >
-                            Services
-                        </NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks
                             to='plans'
                             smooth={true}
                             duration={500}
@@ -79,6 +67,18 @@ function Navbar({ toggle }) {
                             offset={-80}
                         >
                             Plans
+                        </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks
+                            to='services'
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact='true'
+                            offset={-80}
+                        >
+                            Services
                         </NavLinks>
                     </NavItem>
                     <NavItem>

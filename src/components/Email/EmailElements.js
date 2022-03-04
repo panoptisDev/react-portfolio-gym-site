@@ -1,73 +1,74 @@
 import styled from 'styled-components';
-import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
+import ImgBg from '../Images/gym-3.jpeg';
 
 export const EmailContainer = styled.div`
-    height: 800px;
+     background: linear-gradient(
+        180deg, 
+        rgba(0,0,0,0.6) 0%, 
+        rgba(0,0,0,0.6) 35%, 
+        rgba(0,0,0,0.1) 100%
+    ),
+    url(${ImgBg}) no-repeat center;
+    background-size: cover;
+    height: 450px;
     width: 100%;
+    padding: 5rem calc((100vw - 1300px) / 2);
+    color: #fff;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #010606;
-
-    @media screen and (max-width: 768px) {
-        height: 1100px;
-    }
-    @media screen and (max-width: 480px) {
-        height: 1300px;
-    }
 `
 
-export const CarouselWrapper = styled.div`
+export const EmailContent = styled.div`
     display: flex;
-    width: 100%;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
 `
 
-export const CarouselContentWrapper = styled.div`
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 2rem;
+export const EmailH1 = styled.h1`
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 5vw, 3rem);
+    padding: 0 1rem;
 `
 
-export const CarouselContent = styled.div`
-    display: flex;
-    transition: all 250ms linear;
+export const EmailP = styled.p`
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    padding: 0 1rem;
+    margin-bottom: 2rem;
 `
 
-export const SlideImage = styled.img`
-    width: 400px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin: 1.5rem;
-`;
+export const EmailForm = styled.form`
+    z-index: 10;
 
-export const LeftArrow = styled(BsFillArrowLeftCircleFill)`
-    left: 24px;
-    position: absolute;
-    z-index: 1;
-    transform: translateY(-50%);
-    background-color: #fff;
-    outline: 1px solid #fff;
-    top: 50%;
-    height: 48px;
-    width: 48px;
-    border-radius: 24px;
-    cursor: pointer;
-`
+    input {
+        padding: 1rem 1.5rem;
+        outline: none;
+        width: 350px;
+        height: 50px;
+        border: none;
+        margin-right: 1rem;
+        border-radius: 4px;
+    }
 
-export const RightArrow = styled(BsFillArrowRightCircleFill)`
-    right: 24px;
-    position: absolute;
-    z-index: 1;
-    transform: translateY(-50%);
-    background-color: #fff;
-    outline: 1px solid #fff;
-    top: 50%;
-    height: 48px;
-    width: 48px;
-    border-radius: 24px;
-    cursor: pointer;
+    button {
+        padding: 0.8rem 3rem 0.9rem;
+        border: none;
+        background: #f9032f;
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        transition: 0.3s ease;
+        border-radius: 4px;
+
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            background: transparent;
+            outline: 2px solid #fff;
+            font-size: 1.1rem;
+        }
+    }
 `

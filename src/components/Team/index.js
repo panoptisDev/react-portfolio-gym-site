@@ -1,50 +1,107 @@
-import { useState } from "react";
-import { 
+import { useState, useEffect } from 'react';
+import {
   TeamContainer,
-  SlideImage, 
-  SlideTitle,
-  StyledSlider,
+  TeamH1,
+  CarouselWrapper,
+  CarouselContentWrapper,
+  CarouselContent,
+  SlideImage,
+  LeftArrow,
+  RightArrow,
 } from './TeamElements';
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
-const Team = ({ slides }) => {
-  const [current, setCurrent] = useState(0);
-  const length = slides.length;
+function Team({ slides, show }) {
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [length, setLength] = useState(slides.length)
+    const [touchPosition, setTouchPosition] = useState(null)
+    const [hover, setHover] = useState(false);
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+    const onHover = () => {
+      setHover(true);
+    }
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
+    const onLeave = () => {
+      setHover(false);
+    }
 
+    useEffect(() => {
+        setLength(slides.length)
+    }, [slides])
+
+    const nextSlide = () => {
+        if (currentIndex < (length - show)) {
+            setCurrentIndex(prevState => prevState + 1)
+        }
+    }
+
+    const prevSlide = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(prevState => prevState - 1)
+        }
+    }
+
+    const handleTouchStart = (e) => {
+        const touchDown = e.touches[0].clientX
+        setTouchPosition(touchDown)
+    }
+
+    const handleTouchMove = (e) => {
+        const touchDown = touchPosition
+
+        if(touchDown === null) {
+            return
+        }
+
+        const currentTouch = e.touches[0].clientX
+        const diff = touchDown - currentTouch
+
+        if (diff > 5) {
+            nextSlide()
+        }
+
+        if (diff < -5) {
+            prevSlide()
+        }
+
+        setTouchPosition(null)
+    }
+
+  
   return (
     <TeamContainer>
-      <StyledSlider>
-        <FaChevronLeft
-          className="left-arrow"
-          onClick={prevSlide}
-          style={{ color: '#fff' }}
-        />
-        {slides.map((slide, index) => {
-          return (
-            <div key={index}>
-              {index === current && (
-                <SlideImage src={slide.image} alt="" />
-              )}
-              <SlideTitle>{slide.title}</SlideTitle>
-            </div>
-          );
-        })}
-        <FaChevronRight
-          className="right-arrow"
-          onClick={nextSlide}
-          style={{ color: '#fff' }}
-        />
-      </StyledSlider>
+      <TeamH1>Meet Our Trainers</TeamH1>
+      <CarouselWrapper>
+        { currentIndex > 0 &&
+          <LeftArrow onClick={prevSlide} />
+        }
+        <CarouselContentWrapper
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
+          <CarouselContent
+            style={{ transform: `translateX(-${currentIndex * (100 / show)}%)` }}
+          >
+          {slides.map((slide, index) => {
+            return (
+              <div key={index}>
+                  <SlideImage 
+                    src={slide.image} 
+                    alt="" 
+                    onMouseEnter={onHover}
+                    onMouseLeave={onLeave}
+                  />
+                  {hover && (<h1>{slide.title}</h1>)}
+              </div>
+            );
+          })}
+          </CarouselContent>
+        </CarouselContentWrapper>
+        { currentIndex < (length - show) && 
+          <RightArrow onClick={nextSlide} />
+        }
+      </CarouselWrapper>
     </TeamContainer>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team
