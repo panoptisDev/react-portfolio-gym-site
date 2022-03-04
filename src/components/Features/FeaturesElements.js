@@ -8,10 +8,9 @@ export const FeaturesContainer = styled.div`
     max-height: 650px;
     background-position: center;
     background-size: cover;
-    /* display: flex;
+    display: flex;
+    align-items: flex-start;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; */
     color: #fff;
     padding: 0 1rem;
 `
@@ -25,7 +24,7 @@ export const FeaturesH1 = styled.h1`
 
 export const FeaturesList = styled.div`
     list-style: none;
-    margin-left: 150px;
+    margin-left: 120px;
 `
 
 export const FeaturesItem = styled.p`

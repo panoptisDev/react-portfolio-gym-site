@@ -7,6 +7,7 @@ import Email from '../components/Email';
 import Footer from '../components/Footer';
 import { membershipData } from '../components/Membership/data';
 import { featureData } from '../components/Features/data';
+import { slideData } from '../components/Team/data';
 
 function Home() {
   return (
@@ -15,8 +16,8 @@ function Home() {
       <Hero />
       <Membership data={membershipData} />
       <Features data={featureData} />
-      <Team />
-      <Email />
+      <Team slides={slideData} />
+      <Email slides={slideData} show={2} />
       <Footer />
     </>
   );

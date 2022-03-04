@@ -21,6 +21,6 @@ export const featureData = [
         title: 'Basketball Court',
     },
     {
-        title: 'Open 24/7',
+        title: 'Open 7 Days a Week',
     },
 ]
