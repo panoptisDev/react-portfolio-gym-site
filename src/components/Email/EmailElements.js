@@ -50,6 +50,11 @@ export const EmailForm = styled.form`
         border: none;
         margin-right: 1rem;
         border-radius: 4px;
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 1rem;
+            margin-right: 0;
+        }
     }
 
     button {
@@ -70,5 +75,16 @@ export const EmailForm = styled.form`
             outline: 2px solid #fff;
             font-size: 1.1rem;
         }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 `

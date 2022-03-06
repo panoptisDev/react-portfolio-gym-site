@@ -3,7 +3,7 @@ import {
   EmailContent,
   EmailH1,
   EmailP,
-  EmailForm,
+  EmailForm
 } from './EmailElements'
 
 function Email() {
