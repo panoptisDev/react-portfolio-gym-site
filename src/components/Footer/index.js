@@ -1,10 +1,35 @@
-import {} from './FooterElements';
+import {
+  FooterContainer,
+  FooterWrapper,
+  FooterLinksContainer,
+  FooterLinksWrapper,
+  FooterLinkItems,
+  FooterLinkTitle,
+  FooterLink
+} from './FooterElements';
 
 function Footer() {
   return (
-    <div>
-        <h1>Footer</h1>
-    </div>
+    <FooterContainer>
+        <FooterWrapper>
+          <FooterLinksContainer>
+            <FooterLinksWrapper>
+              <FooterLinkItems>
+                <FooterLinkTitle>About</FooterLinkTitle>
+                  <FooterLink to='/#'>Link</FooterLink>
+                </FooterLinkItems>
+              <FooterLinkItems>
+                <FooterLinkTitle>Contact</FooterLinkTitle>
+                  <FooterLink to='/#'>Link</FooterLink>
+                </FooterLinkItems>
+              <FooterLinkItems>
+                <FooterLinkTitle>Membership</FooterLinkTitle>
+                  <FooterLink to='/#'>Link</FooterLink>
+                </FooterLinkItems>
+              </FooterLinksWrapper>
+          </FooterLinksContainer>
+        </FooterWrapper>
+    </FooterContainer>
   )
 }
 
