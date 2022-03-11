@@ -1,18 +1,72 @@
 import styled from 'styled-components';
-
+import { FaPhoneAlt } from 'react-icons/fa';
+import { BsGeoAltFill, BsClockFill } from 'react-icons/bs';
 
 export const FooterContainer = styled.footer`
     background-color: #f9032f;
+    color: #fff;
 `
 export const FooterWrapper = styled.div`
-    padding: 48px 24px;
+    /* padding: 48px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto; */
+    padding: 5rem calc((100vw - 1100px) / 2);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 `
+export const FooterDescription = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+`
+export const FooterTitle = styled.h1`
+    font-size: 2rem;
+    margin-bottom: 2rem;
+`
+export const FooterInfo = styled.p`
+    font-size: 1rem;
+    margin-bottom: 2rem;
+`
+export const AddressIcon = styled(BsGeoAltFill)`
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.1rem;
+    margin-right: 0.7rem;
+`
+export const FooterAddress = styled.p`
+    font-size: 1rem;
+    margin-bottom: 1rem;
+`
+export const PhoneIcon = styled(FaPhoneAlt)`
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.1rem;
+    margin-right: 0.6rem;
+`
+export const FooterPhone = styled.p`
+    font-size: 1rem;
+    margin-bottom: 1rem;
+`
+export const FooterHours = styled.p`
+    font-size: 1rem;
+
+    p {
+        margin-left: 1.7rem;
+    }
+`
+
+export const ClockIcon = styled(BsClockFill)`
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.1rem;
+    margin-right: 0.7rem;
+`
+
 export const FooterLinksContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -36,7 +90,6 @@ export const FooterLinkItems = styled.div`
     text-align: left;
     width: 160px;
     box-sizing: border-box;
-    color: #fff;
     
     @media screen and (max-width: 420px) {
         margin: 0;
@@ -49,7 +102,6 @@ export const FooterLinkTitle = styled.h1`
     margin-bottom: 16px;
 `
 export const FooterLink = styled.p`
-    color: #fff;
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
@@ -57,12 +109,13 @@ export const FooterLink = styled.p`
     &:hover {
         color: #010606;
         transition: 0.3s ease-out;
+        cursor: pointer;
     }
 `
 
 export const SocialMediaContainer = styled.section`
-    max-width: 1000px;
     width: 100%;
+    padding-bottom: 24px;
 `;
 
 export const SocialMediaWrapper = styled.div`
@@ -70,7 +123,8 @@ export const SocialMediaWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     max-width: 1100px;
-    margin: 40px auto 0 auto;
+    margin: 0 auto;
+    padding: 16px 24px;
 
     @media screen and (max-width: 820px) {
         flex-direction: column;
@@ -78,7 +132,6 @@ export const SocialMediaWrapper = styled.div`
 `;
 
 export const WebsiteRights = styled.small`
-    color: #fff;
     margin-bottom: 16px;
 `;
 

@@ -1,6 +1,15 @@
 import {
   FooterContainer,
   FooterWrapper,
+  FooterDescription,
+  FooterTitle,
+  FooterInfo,
+  AddressIcon,
+  FooterAddress,
+  PhoneIcon,
+  FooterPhone,
+  FooterHours,
+  ClockIcon,
   FooterLinksContainer,
   FooterLinksWrapper,
   FooterLinkItems,
@@ -21,10 +30,33 @@ import {
 } from 'react-icons/fa';
 
 
+
 function Footer() {
   return (
     <FooterContainer>
         <FooterWrapper>
+          <FooterDescription>
+            <FooterTitle>214 Fitness</FooterTitle>
+            <FooterInfo>Full-service fitness gym located in Downtown Dallas</FooterInfo>
+            <FooterAddress>
+              <AddressIcon />
+              1500 Jackson Street, Dallas, TX 75201
+            </FooterAddress>
+            <FooterPhone>
+              <PhoneIcon />
+              (214) - FITNESS
+            </FooterPhone>
+            <FooterHours>
+              <ClockIcon />
+              Mon: <span style={{ marginLeft: '5px' }}>7:00am - 10:00pm</span>
+              <p>Tue: <span style={{ marginLeft: '10px' }}>7:00am - 10:00pm</span></p>
+              <p>Wed: <span style={{ marginLeft: '3px' }}>7:00am - 10:00pm</span></p>
+              <p>Thu: <span style={{ marginLeft: '10px' }}>7:00am - 10:00pm</span></p>
+              <p>Fri: <span style={{ marginLeft: '20px' }}>7:00am - 9:00pm</span></p>
+              <p>Sat: <span style={{ marginLeft: '11px' }}>8:00am - 8:00pm</span></p>
+              <p>Sun: <span style={{ marginLeft: '7px' }}>8:00am - 6:00pm</span></p>
+            </FooterHours>
+          </FooterDescription>
           <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems>
@@ -41,6 +73,7 @@ function Footer() {
                 </FooterLinkItems>
               </FooterLinksWrapper>
           </FooterLinksContainer>
+          </FooterWrapper>
           <SocialMediaContainer>
             <SocialMediaWrapper>
               <WebsiteRights>214 Fitness &copy; {new Date().getFullYear()} All rights reserved.</WebsiteRights>
@@ -83,7 +116,6 @@ function Footer() {
               </SocialIcons>
             </SocialMediaWrapper>
           </SocialMediaContainer>
-        </FooterWrapper>
     </FooterContainer>
   )
 }
