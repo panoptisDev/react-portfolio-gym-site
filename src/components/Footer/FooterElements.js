@@ -124,7 +124,7 @@ export const SocialMediaWrapper = styled.div`
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 16px 24px;
+    padding: 16px 64px;
 
     @media screen and (max-width: 820px) {
         flex-direction: column;

@@ -76,7 +76,9 @@ function Footer() {
           </FooterWrapper>
           <SocialMediaContainer>
             <SocialMediaWrapper>
-              <WebsiteRights>214 Fitness &copy; {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+              <WebsiteRights>
+                214 Fitness &copy; {new Date().getFullYear()} All rights reserved.
+              </WebsiteRights>
               <SocialIcons>
                 <SocialIconLink
                   href='//www.facebook.com/' 

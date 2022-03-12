@@ -26,7 +26,7 @@ export const HeroItems = styled.div`
     height: 100vh;
     max-height: 100%;
     padding: 0 2rem;
-    width: 800px;
+    width: 100%;
     color: #fff;
     line-height: 1;
 
@@ -41,6 +41,11 @@ export const HeroH1 = styled.h1`
     letter-spacing: 3px;
     text-transform: uppercase;
     border-bottom: 3px solid #f9032f;
+
+    &:hover {
+        font-size: clamp(3rem, 11vw, 6rem);
+        border-bottom: 4px solid #f9032f;
+    }
 
     @media screen and (max-width: 650px) {
         width: 65%;
