@@ -3,19 +3,12 @@ import { AiOutlineCheckCircle } from 'react-icons/ai'
 
 
 export const MembershipContainer = styled.div`
-    height: 800px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #010606;
-
-    @media screen and (max-width: 768px) {
-        height: 1100px;
-    }
-    @media screen and (max-width: 480px) {
-        height: 1300px;
-    }
 `
 
 export const MembershipH1 = styled.h1`
@@ -23,12 +16,12 @@ export const MembershipH1 = styled.h1`
     font-size: clamp(2rem, 5vw, 3rem);
     padding: 0 1rem;
     color: #fff;
+    margin-top: 2rem;
 `
 
 export const MembershipP = styled.p`
     margin-bottom: 2rem;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-    padding: 0 1rem;
     color: #fff;
 `
 
@@ -36,7 +29,7 @@ export const MembershipWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 auto;
+    margin-bottom: 2rem;
 `
 
 export const MembershipCard = styled.div`

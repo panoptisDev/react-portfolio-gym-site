@@ -4,15 +4,14 @@ import FeatureImg from '../Images/gym-2.jpeg';
 
 export const FeaturesContainer = styled.div`
     background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url(${FeatureImg});
-    height: 100vh;
-    max-height: 650px;
+    height: 100%;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     color: #fff;
-    padding: 0 1rem;
+    padding-bottom: 50px;
 `
 
 export const FeaturesH1 = styled.h1`
@@ -20,11 +19,19 @@ export const FeaturesH1 = styled.h1`
     padding-top: 50px;
     margin-bottom: 1rem;
     margin-left: 100px;
+
+    @media screen and (max-width: 480px) {
+        margin-left: 50px;
+    }
 `
 
 export const FeaturesList = styled.div`
     list-style: none;
     margin-left: 120px;
+
+    @media screen and (max-width: 480px) {
+        margin-left: 60px;
+    }
 `
 
 export const FeaturesItem = styled.p`

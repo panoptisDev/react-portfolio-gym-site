@@ -26,6 +26,7 @@ import {
   FaInstagram,
   FaTiktok,
   FaTwitter,
+  FaYelp,
   FaYoutube
 } from 'react-icons/fa';
 
@@ -61,15 +62,24 @@ function Footer() {
             <FooterLinksWrapper>
               <FooterLinkItems>
                 <FooterLinkTitle>About</FooterLinkTitle>
-                  <FooterLink to='/#'>Link</FooterLink>
+                  <FooterLink to='/#'>Testimonials</FooterLink>
+                  <FooterLink to='/#'>Accessibility</FooterLink>
+                  <FooterLink to='/#'>Privacy Policy</FooterLink>
+                  <FooterLink to='/#'>Terms of Service</FooterLink>
                 </FooterLinkItems>
               <FooterLinkItems>
                 <FooterLinkTitle>Contact</FooterLinkTitle>
-                  <FooterLink to='/#'>Link</FooterLink>
+                  <FooterLink to='/#'>Sign Up</FooterLink>
+                  <FooterLink to='/#'>Support</FooterLink>
+                  <FooterLink to='/#'>Legal</FooterLink>
+                  <FooterLink to='/#'>Sitemap</FooterLink>
                 </FooterLinkItems>
               <FooterLinkItems>
                 <FooterLinkTitle>Membership</FooterLinkTitle>
-                  <FooterLink to='/#'>Link</FooterLink>
+                  <FooterLink to='/#'>Pricing</FooterLink>
+                  <FooterLink to='/#'>Plans</FooterLink>
+                  <FooterLink to='/#'>FAQ</FooterLink>
+                  <FooterLink to='/#'>Gift Cards</FooterLink>
                 </FooterLinkItems>
               </FooterLinksWrapper>
           </FooterLinksContainer>
@@ -107,6 +117,13 @@ function Footer() {
                   aria-label='Tiktok'
                 >
                   <FaTiktok />
+                </SocialIconLink>
+                <SocialIconLink
+                  href='//www.yelp.com/' 
+                  target='_blank'
+                  aria-label='Yelp'
+                >
+                  <FaYelp />
                 </SocialIconLink>
                 <SocialIconLink
                   href='//www.youtube.com/' 
