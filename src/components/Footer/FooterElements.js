@@ -17,6 +17,22 @@ export const FooterWrapper = styled.div`
     padding: 5rem calc((100vw - 1100px) / 2);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 1200px) {
+        margin-left: 20px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        margin-left: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-left: 20px;
+    }
 `
 export const FooterDescription = styled.div`
     display: flex;
@@ -73,6 +89,10 @@ export const FooterLinksContainer = styled.div`
     
     @media screen and (max-width: 820px) {
         padding-top: 32px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-left: 20px;
     }
 `
 export const FooterLinksWrapper = styled.div`
