@@ -25,8 +25,8 @@ function Home() {
       <Hero />
       <Membership data={membershipData} />
       <Features data={featureData} />
-      <Team slides={slideData} />
-      <Email slides={slideData} show={2} />
+      <Team slides={slideData} show={2} />
+      <Email />
       <Footer />
     </>
   );

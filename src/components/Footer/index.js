@@ -29,15 +29,22 @@ import {
   FaYelp,
   FaYoutube
 } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 
 
 
 function Footer() {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  }
+
   return (
     <FooterContainer>
         <FooterWrapper>
           <FooterDescription>
-            <FooterTitle>214 Fitness</FooterTitle>
+            <FooterTitle to='/' onClick={toggleHome}>
+              214 Fitness
+            </FooterTitle>
             <FooterInfo>Full-service fitness gym located in Downtown Dallas</FooterInfo>
             <FooterAddress>
               <AddressIcon />
@@ -87,7 +94,7 @@ function Footer() {
           <SocialMediaContainer>
             <SocialMediaWrapper>
               <WebsiteRights>
-                214 Fitness &copy; {new Date().getFullYear()} All rights reserved.
+                214 Fitness LLC &copy; {new Date().getFullYear()} All rights reserved.
               </WebsiteRights>
               <SocialIcons>
                 <SocialIconLink

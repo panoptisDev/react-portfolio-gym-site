@@ -17,7 +17,7 @@ import {
 function Membership({ data }) {
 
   return (
-    <MembershipContainer>
+    <MembershipContainer id='plans'>
         <MembershipH1>Our Membership Plans</MembershipH1>
         <MembershipP>Get started today and receive <span style={{ fontWeight: 'bold' }}>50% off</span> your <span style={{ borderBottom: '2px solid #f9032f' }}>first month</span></MembershipP>
         <MembershipWrapper>

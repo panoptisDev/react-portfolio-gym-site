@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { BsGeoAltFill, BsClockFill } from 'react-icons/bs';
 
@@ -40,8 +41,11 @@ export const FooterDescription = styled.div`
     justify-content: center;
     align-items: flex-start;
 `
-export const FooterTitle = styled.h1`
+export const FooterTitle = styled(Link)`
     font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
     margin-bottom: 2rem;
 `
 export const FooterInfo = styled.p`

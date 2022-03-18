@@ -68,7 +68,7 @@ function Team({ slides, show }) {
 
   
   return (
-    <TeamContainer>
+    <TeamContainer id='trainers'>
       <TeamH1>Meet Our Trainers</TeamH1>
       <CarouselWrapper>
         { currentIndex > 0 &&

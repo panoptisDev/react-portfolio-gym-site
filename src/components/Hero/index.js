@@ -28,7 +28,7 @@ function Hero() {
               <HeroP>Join Now for only $19/Month</HeroP>
               <HeroBtnWrapper>
                 <Button
-                  to='signup' 
+                  to='plans' 
                   onMouseEnter={onHover} 
                   onMouseLeave={onHover}
                   primary='true'

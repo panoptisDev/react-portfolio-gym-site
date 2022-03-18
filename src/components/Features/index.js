@@ -9,7 +9,7 @@ import {
 
 function Features({ data }) {
   return (
-    <FeaturesContainer>
+    <FeaturesContainer id='services'>
         <FeaturesH1>What We Offer</FeaturesH1>
         {data.map((feature, index) => {
           return (
