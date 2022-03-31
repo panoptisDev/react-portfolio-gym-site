@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Membership from '../components/Membership';
 import Team from '../components/Team';
+import Trainers from '../components/Trainers';
 import Email from '../components/Email';
 import Footer from '../components/Footer';
 import { membershipData } from '../components/Membership/data';
@@ -25,7 +26,8 @@ function Home() {
       <Hero />
       <Membership data={membershipData} />
       <Features data={featureData} />
-      <Team slides={slideData} show={2} />
+      {/* <Team slides={slideData} show={2} /> */}
+      <Trainers />
       <Email />
       <Footer />
     </>
