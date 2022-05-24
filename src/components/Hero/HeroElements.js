@@ -35,22 +35,55 @@ export const HeroItems = styled.div`
     }
 `
 
+// export const HeroH1 = styled.h1`
+//     font-size: clamp(2.5rem, 10vw, 5rem);
+//     margin-bottom: 2rem;
+//     letter-spacing: 3px;
+//     text-transform: uppercase;
+//     border-bottom: 3px solid #f9032f;
+
+//     &:hover {
+//         font-size: clamp(3rem, 11vw, 6rem);
+//         border-bottom: 4px solid #f9032f;
+//     }
+
+//     @media screen and (max-width: 650px) {
+//         width: 65%;
+//     }
+// `
+
 export const HeroH1 = styled.h1`
     font-size: clamp(2.5rem, 10vw, 5rem);
     margin-bottom: 2rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    border-bottom: 3px solid #f9032f;
+    position: relative;
+    /* border-bottom: 3px solid #f9032f; */
 
-    &:hover {
-        font-size: clamp(3rem, 11vw, 6rem);
-        border-bottom: 4px solid #f9032f;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #f9032f;
+
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 
     @media screen and (max-width: 650px) {
         width: 65%;
     }
 `
+
 
 export const HeroP = styled.p`
     font-size: clamp(2rem, 2.5vw, 3rem);
